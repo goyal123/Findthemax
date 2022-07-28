@@ -29,5 +29,17 @@
 
 
         }
+
+        public string findstr(string num8,string num9,string num10)
+        {
+            if ((num8.CompareTo(num9) >= 0) && (num8.CompareTo(num10) >= 0))
+                return num8;
+            else if ((num9.CompareTo(num8) >= 0) && (num9.CompareTo(num10) >= 0))
+                return num9;
+            else if ((num10.CompareTo(num8) >= 0) && (num10.CompareTo(num9) >= 0))
+                return num10;
+            else
+                return "";
+        }
     }
 }
