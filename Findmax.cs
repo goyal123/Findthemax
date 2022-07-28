@@ -2,7 +2,8 @@
 {
     public class findmax
     {
-        public int find(int num1,int num2,int num3)
+       
+        public int findint(int num1,int num2,int num3)
         {
             if ((num1.CompareTo(num2) >= 0) && (num1.CompareTo(num3) >= 0))
                 return num1;
@@ -14,6 +15,19 @@
                 return 0; 
 
                 
+        }
+        public double findfloat(double num4, double num5, double num6)
+        {
+            if ((num4.CompareTo(num5) >= 0) && (num4.CompareTo(num6) >= 0))
+                return num4;
+            else if ((num5.CompareTo(num4) >= 0) && (num5.CompareTo(num6) >= 0))
+                return num5;
+            else if ((num6.CompareTo(num4) >= 0) && (num6.CompareTo(num5) >= 0))
+                return num6;
+            else
+                return 0;
+
+
         }
     }
 }
