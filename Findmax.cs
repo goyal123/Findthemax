@@ -1,7 +1,8 @@
 ﻿namespace Findthemax
 {
     public class Findmax<T> where T:IComparable
-    { public T num1, num2, num3;
+    {   public T num1, num2, num3;
+        public static T temp;
         public Findmax(T num1,T num2, T num3)
         {
             this.num1 = num1;
@@ -12,9 +13,9 @@
         public void TestMaximum()
         {
             var maxvalue = Findingmax(num1, num2, num3);
-            Console.WriteLine("Max value = " + maxvalue);
-
+            printmaximum(maxvalue);
         }
+
         public int findint(int num1,int num2,int num3)
         {
             if ((num1.CompareTo(num2) >= 0) && (num1.CompareTo(num3) >= 0))
@@ -54,17 +55,29 @@
                 return default;
         }
 
-        public static T Findingmax(T num1,T num2,T num3) 
-        {
-            if ((num1.CompareTo(num2) >= 0) && (num1.CompareTo(num3) >= 0))
-                return num1;
-            else if ((num2.CompareTo(num1) >= 0) && (num2.CompareTo(num3) >= 0))
-                return num2;
-            else if ((num3.CompareTo(num2) >= 0) && (num3.CompareTo(num1) >= 0))
-                return num3;
-            else
-                return default;
+        public static T Findingmax(params T[] ListNumbers) 
+        {  
+
+            for (int i=0;i<ListNumbers.Length-1;i++)
+            {
+                
+                if (ListNumbers[i].CompareTo(ListNumbers[i+1])>=0)
+                {
+                    temp = ListNumbers[i];
+                }
+                else
+                {
+                    temp = ListNumbers[i+1];
+                }
+            }
             
+            return temp;
+
+        }
+
+        public static void printmaximum(T max)
+        {
+            Console.WriteLine("Max = " + max);
         }
     }
 }

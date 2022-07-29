@@ -21,9 +21,9 @@
 
             Console.WriteLine("-----------------------------------------");
 
-            Console.WriteLine("Max = " + Findmax<int>.Findingmax(30,10,20));
-            Console.WriteLine("Max = " + Findmax<double>.Findingmax(10.5, 10.6, 10.7));
-            Console.WriteLine("Max = " + Findmax<string>.Findingmax("Apple","Banana","Peach"));
+            Console.WriteLine("Max = " + Findmax<int>.Findingmax(30,10,20,40));
+            Console.WriteLine("Max = " + Findmax<double>.Findingmax(10.5, 10.6, 10.7,10.4));
+            Console.WriteLine("Max = " + Findmax<string>.Findingmax("Apple","Banana","Peach","orange"));
         }
     }
 }
